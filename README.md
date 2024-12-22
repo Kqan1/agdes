@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AGDES (Afet Güzergah Denetim Sistemi)
 
-## Getting Started
+AGDES (Afet Güzergah Denetim Sistemi), afet sonrası yol hasarlarını haritalandırmayı amaçlayan açık kaynak bir projedir. Bu repository, haritalandırma verilerini görüntüleyebileceğiniz web uygulamasını içermektedir. Proje, Başakşehir Living Lab 11. İnovasyon Yarışması'nda üçüncülük ödülüne layık görülmüştür.
 
-First, run the development server:
+## 🚀 Teknolojiler
+
+- [Next.js 14](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Tip güvenliği için
+- [Tailwind CSS](https://tailwindcss.com/) - Stil ve tasarım için
+- [Prisma](https://www.prisma.io/) - Veritabanı ORM
+- [Google Maps API](https://developers.google.com/maps) - Harita entegrasyonu için
+
+## 🛠️ Kurulum
+
+1. Projeyi klonlayın:
+```bash
+git clone [repo-url]
+cd agdes
+```
+
+2. Bağımlılıkları yükleyin:
+```bash
+npm install
+```
+
+3. `.env` dosyasını oluşturun ve gerekli ortam değişkenlerini ekleyin:
+```env
+DATABASE_URL="your-database-url"
+GOOGLE_MAPS_API_KEY="your-google-maps-api-key"
+```
+
+4. Veritabanı şemasını senkronize edin:
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+## 🚀 Geliştirme
+
+Geliştirme sunucusunu başlatmak için:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Uygulama http://localhost:3000 adresinde çalışacaktır.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Derleme
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Projeyi production için derlemek için:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Derlenmiş uygulamayı başlatmak için:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Lisans
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu proje MIT lisansı altında lisanslanmıştır.

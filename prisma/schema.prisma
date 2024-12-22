@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model marker {
+  id            String  @id @default(cuid())
+  lng           Decimal
+  lat           Decimal
+  afettype      String
+  engelseviyesi Int     @default(0)
+  sabitdrone    Int     @default(0)
+  donerdrone    Int     @default(0)
+  yedekguc      Int     @default(0)
+  ekipkisi      Int     @default(0)
+  type          type
+}
+
+enum type {
+  ISTASYON
+  ENGEL
+  EKIP
+}
